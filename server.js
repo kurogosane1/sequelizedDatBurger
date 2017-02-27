@@ -10,7 +10,7 @@ var db = require("./models");
 var app = express();
 
 // create a port for online and local deployment
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 8080;
 
 // add body parser to the application to easily manipulate the responses
 app.use(bodyParser.json());
@@ -37,6 +37,6 @@ app.use("/", routes);
 
 //deploy the application
 db.sequelize.sync().then(function(){
-	app.listen(process.env.PORT || 3000);
+	app.listen(process.env.PORT || 8080);
 
 });
