@@ -32,11 +32,13 @@ app.engine("handlebars", exphbs({defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // import the routes
-var routes = require("./controllers/burger_controller.js");
-app.use("/", routes);
+// var routes = require("./controllers/burger_controller.js");
+// app.use("/", routes);
+require("./controllers/burger_controllers.js")(app);
+// require("./models/burgerdat.js")(app);
 
 //deploy the application
 db.sequelize.sync().then(function(){
-	app.listen(process.env.PORT || 8080);
+	app.listen(PORT);
 
 });
