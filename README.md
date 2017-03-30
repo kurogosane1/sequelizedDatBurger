@@ -11,21 +11,21 @@ npm install
 Setting Up
 
 then you will need to create a key.js file in the same directory as the server.js. Inside the key.js file you will enter in your mysql password with the following format.
-...
+```
 const key = {
 	mysql: ""//Your own Password in Quotes//
 };
-...
 
-...
+
+
 module.exports = key;
-...
+```
 You should also go into the config/config.json to double check then connection's informations
 
 In the db directory you will notice the schema and seed for the sql database.
 
 After you got your database set up, navigate to the models/index.js. In there uncomment line 12-18
-...
+```
 if (require("../key.js")){
   var kee = require("../key.js");
 
@@ -34,7 +34,7 @@ if (require("../key.js")){
   }
 }
 We have that comment out due to development errors to heroku.
-...
+```
 Running It
 
 You will want to node server.js and go to your localhost:5000. There you will be able to log all the burgers you ate.
