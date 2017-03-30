@@ -1,4 +1,4 @@
-# burger
+# sequelizedDatBurger
 This is a burger logger that keeps track of all the burgers you want to eat and have ate. For the list that you want to eat there is a devour button that will update the database that the burger has been eaten.
 
 Using MySQL to keep track of the burgers. Using Node for the backend experience. Express to host the page. Handlebars to create the page. We will also be using sequelize. Sequelize is a easy to use MySQL set up.
